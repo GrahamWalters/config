@@ -17,8 +17,6 @@
 
 1. Install SSH keys
 
-2. [Sublime Text 3](https://www.sublimetext.com/3) is **required**. [Package Control](https://packagecontrol.io/installation) should be installed **after** running install.sh
-
 
 ## Yet to be automated
 
@@ -29,6 +27,9 @@
 
 
 ## Manual Install Instructions
+
+### Sublime Text 3 Package Control
+[Package Control](https://packagecontrol.io/installation) should be installed **after** running install.sh
 
 ### Rails
 I need to know more about if I can install multiple versions of rails "globally" before automating this.

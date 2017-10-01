@@ -1,45 +1,40 @@
-# add checks for
+exit
 
 
-# Preferences
-defaults write com.apple.Siri StatusMenuVisible  -int 0
-defaults write com.apple.menuextra.battery ShowPercent -string "Yes"
-# - Show volume
-# - Show timemachine
+# Kill affected applications
+for app in TextEdit Finder SystemUIServer; do killall "$app"; done
 
-echo "Disable shadow in screenshots"
-defaults write com.apple.screencapture disable-shadow -bool true
 
-echo "Enable Dashboard as overlay"
-defaults write com.apple.dashboard dashboard-enabled-state -int 3
 
-echo "Use Plain Text as the default in TextEdit"
-defaults write com.apple.TextEdit RichText -int 0
 
-# Finder
-echo "Use current directory as default search scope in Finder"
-defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
-echo "Show Status bar in Finder"
-defaults write com.apple.finder ShowStatusBar -bool true
 
-echo "Disable the warning when changing a file extension"
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# - item details
-# - left icon
-# - size
-# - default folder ~ instead of "all files"
-# - show servers
-# - show disks
 
-killall SystemUIServer
-killall Finder
-killall TextEdit
+
+
+
 
 
 # Install Brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+
+echo "Installing applications"
+brew tap caskroom/cask
+brew cask install sublime-text
+brew cask install github-desktop
+brew cask install google-chrome
+brew cask install google-play-music-desktop-player
+brew cask install dropbox
+brew cask install tunnelblick
+brew cask install google-backup-and-sync
+brew cask install postman
+brew cask install psequel
+brew cask install smcfancontrol
+brew cask install docker
+brew cask install kitematic
+
 
 # Enable brew services
 brew tap homebrew/services
@@ -64,5 +59,6 @@ gem install bundler sass jekyll rouge
 
 
 # Setup Sublime Text 3 Settings
+# - check directory exists
 git clone https://github.com/GrahamWalters/sublime-settings.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 
