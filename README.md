@@ -13,17 +13,19 @@
 | `hosts` | Directs `http://tmp.dev` to a local folder |
 
 
-## Before you start
+## Before You Start
 
 1. Install SSH keys
 
 
 ## Yet to be automated
 
-- `~/.bash_profile`
-- `/etc/hosts`
 - Prep Terminal.app from Mark Otto's Config repo
 - PHP Install Instructions https://getgrav.org/blog/macos-sierra-apache-multiple-php-versions
+
+## Still deciding:
+- nginx or apache. apache in the past. nginx in production
+- Which versions of php to install. 5.6 and 7?
 
 
 ## Manual Install Instructions

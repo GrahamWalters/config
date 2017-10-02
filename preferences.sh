@@ -286,7 +286,7 @@ defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 
 
 ###############################################################################
-# TextEdit, and QuickTimePlayerX                                              #
+# TextEdit and QuickTimePlayerX                                               #
 ###############################################################################
 
 

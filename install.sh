@@ -1,27 +1,21 @@
-exit
+#!/usr/bin/env bash
 
 
-# Kill affected applications
-for app in TextEdit Finder SystemUIServer; do killall "$app"; done
-
-
-
-
-
-
-
-
-
-
-
+# Move files into position
+cp .bash_profile ~/.bash_profile
+cp .gitconfig ~/.gitconfig
+sudo sh -c 'cat hosts >> /etc/hosts'
 
 
 # Install Brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Brew Taps
+brew tap homebrew/services
+brew tap caskroom/cask
+
 
 echo "Installing applications"
-brew tap caskroom/cask
 brew cask install sublime-text
 brew cask install github-desktop
 brew cask install google-chrome
@@ -36,11 +30,9 @@ brew cask install docker
 brew cask install kitematic
 
 
-# Enable brew services
-brew tap homebrew/services
-
-# Brew install
+echo "Installing dev tools"
 brew install cmake git go rbenv imagemagick memcached mongodb mysql node postgresql qt@5.5 redis rsync yarn bash-git-prompt
+
 
 # Setup Ruby
 LATEST_RUBY_VERSION="$(rbenv install -l | grep -v - | tail -1 | tr -d '[[:space:]]')"
@@ -58,7 +50,17 @@ gem install bundler sass jekyll rouge
 # Setup Node
 
 
-# Setup Sublime Text 3 Settings
-# - check directory exists
-git clone https://github.com/GrahamWalters/sublime-settings.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+# Set Sublime Text 3 Settings
+if [ -d "~/Library/Application Support/Sublime Text 3/Packages/User" ]; then
+    git clone https://github.com/GrahamWalters/sublime-settings.git "~/Library/Application Support/Sublime Text 3/Packages/User"
+else
+    echo "Error installing Sublime Text settings."
+    echo "Please check this directory exists \"~/Library/Application Support/Sublime Text 3/Packages/User\""
+fi
 
+
+# Set Preferences
+./preferences.sh
+
+echo "Finished installing & setting preferences."
+echo "Reboot computer to apply all settings"
