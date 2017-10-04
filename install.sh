@@ -48,6 +48,7 @@ gem install bundler sass jekyll rouge
 
 
 # Setup Node
+yarn global add bower gulp nodemon vue-cli
 
 
 # Set Sublime Text 3 Settings
