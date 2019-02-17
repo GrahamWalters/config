@@ -28,6 +28,9 @@ brew cask install psequel
 brew cask install smcfancontrol
 brew cask install docker
 brew cask install kitematic
+brew cask install nightowl
+brew cask install spectacle
+brew cask install plug
 
 
 echo "Installing dev tools"
