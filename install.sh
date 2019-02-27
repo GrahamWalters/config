@@ -31,6 +31,7 @@ brew cask install kitematic
 brew cask install nightowl
 brew cask install spectacle
 brew cask install plug
+brew cask install soundnode
 
 
 echo "Installing dev tools"
