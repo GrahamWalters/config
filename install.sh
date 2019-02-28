@@ -16,22 +16,26 @@ brew tap caskroom/cask
 
 
 echo "Installing applications"
-brew cask install sublime-text
-brew cask install github-desktop
-brew cask install google-chrome
-brew cask install google-play-music-desktop-player
+brew cask install docker
 brew cask install dropbox
-brew cask install tunnelblick
+brew cask install github-desktop
 brew cask install google-backup-and-sync
+brew cask install google-chrome
+brew cask install kitematic
+brew cask install marshallofsound-google-play-music-player
+brew cask install nightowl
+brew cask install plug
 brew cask install postman
 brew cask install psequel
 brew cask install smcfancontrol
-brew cask install docker
-brew cask install kitematic
-brew cask install nightowl
-brew cask install spectacle
-brew cask install plug
 brew cask install soundnode
+brew cask install spectacle
+brew cask install sublime-text
+brew cask install transmission
+brew cask install transmit4
+brew cask install tunnelblick
+brew cask install visual-studio-code
+brew cask install whatsapp
 
 
 echo "Installing dev tools"
