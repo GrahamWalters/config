@@ -39,7 +39,16 @@ brew cask install whatsapp
 
 
 echo "Installing dev tools"
-brew install cmake git go rbenv imagemagick memcached mongodb mysql node postgresql qt@5.5 redis rsync yarn bash-git-prompt
+brew install cmake git gpg gpg-agent goenv rbenv imagemagick memcached mongodb mysql node postgresql qt@5.5 redis rsync yarn bash-git-prompt
+
+
+# Setup Go
+LATEST_GO_VERSION="$(goenv install -l | grep -v -E "beta|rc" | tail -1 | tr -d '[[:space:]]')"
+
+goenv init
+eval "$(goenv init -)"
+goenv install $LATEST_GO_VERSION
+goenv global $LATEST_GO_VERSION
 
 
 # Setup Ruby
@@ -51,6 +60,7 @@ rbenv install $LATEST_RUBY_VERSION
 rbenv global $LATEST_RUBY_VERSION
 
 gem install bundler sass jekyll rouge
+
 
 # Setup PHP
 
