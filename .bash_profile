@@ -8,6 +8,12 @@ if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
 fi
 
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion || {
+  # if not found in /usr/local/etc, try the brew --prefix location
+  [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ] && \
+      . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+}
+
 # goenv
 if which goenv > /dev/null; then eval "$(goenv init -)"; fi
 

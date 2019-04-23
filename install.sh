@@ -39,7 +39,7 @@ brew cask install whatsapp
 
 
 echo "Installing dev tools"
-brew install cmake git gpg gpg-agent goenv rbenv imagemagick memcached mongodb mysql node postgresql qt@5.5 redis rsync yarn bash-git-prompt
+brew install cmake git gpg gpg-agent goenv rbenv imagemagick memcached mongodb mysql node postgresql qt@5.5 redis rsync yarn bash-git-prompt bash-completion
 
 
 # Setup Go
