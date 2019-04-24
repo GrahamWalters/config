@@ -27,6 +27,7 @@ brew cask install nightowl
 brew cask install plug
 brew cask install postman
 brew cask install psequel
+brew cask install sequel-pro
 brew cask install smcfancontrol
 brew cask install soundnode
 brew cask install spectacle
@@ -35,6 +36,7 @@ brew cask install transmission
 brew cask install transmit4
 brew cask install tunnelblick
 brew cask install visual-studio-code
+brew cask install vlc
 brew cask install whatsapp
 
 
