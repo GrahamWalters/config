@@ -17,28 +17,26 @@
 [color]
     ui = auto
 
-[color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
+[color.branch]
+    current = cyan
 
-[color "diff"]
-    meta = yellow
-    frag = magenta
+[color.diff]
+    meta = blue
+    frag = cyan
     old = red
     new = green
     whitespace = red reverse
 
-[color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+[color.status]
+    added = green
+    changed = yellow
+    untrackedddd = red
 
 [core]
     editor = /usr/bin/vim
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
-[filter "lfs"]
+[filter.lfs]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
