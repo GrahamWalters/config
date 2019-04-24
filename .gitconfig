@@ -30,7 +30,7 @@
 [color.status]
     added = green
     changed = yellow
-    untrackedddd = red
+    untracked = red
 
 [core]
     editor = /usr/bin/vim
