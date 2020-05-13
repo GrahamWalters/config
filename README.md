@@ -1,5 +1,11 @@
 # Config
 
+## Install
+```
+git clone https://github.com/GrahamWalters/config.git ~/dev/config
+```
+
+
 **This is a WIP. install.sh needs cleaning up. I maybe I should split that file up**
 
 **Config** is inspired by [Mark Otto's Config repo](https://github.com/mdo/config/). Running `install.sh` should apply system preferences, Sublime Text preferences, install dev tools, and more.
@@ -36,4 +42,3 @@
 ### Rails
 I need to know more about if I can install multiple versions of rails "globally" before automating this.
 https://gorails.com/setup/osx/10.13-high-sierra
-

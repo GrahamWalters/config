@@ -1,47 +1,28 @@
 #!/usr/bin/env bash
 
 
-# Move files into position
-cp .bash_profile ~/.bash_profile
-cp .gitconfig ~/.gitconfig
+# Link Files
+ln -s ~/dev/config/.gitconfig ~/.gitconfig
+ln -s ~/dev/config/.bash_profile ~/.bash_profile
+
+# TODO?
 sudo sh -c 'cat hosts >> /etc/hosts'
 
 
 # Install Brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Brew Taps
-brew tap homebrew/services
-brew tap caskroom/cask
+
+echo "Installing Brew Taps"
+# Moved to Brewfile
 
 
 echo "Installing applications"
-brew cask install docker
-brew cask install dropbox
-brew cask install github-desktop
-brew cask install google-backup-and-sync
-brew cask install google-chrome
-brew cask install kitematic
-brew cask install marshallofsound-google-play-music-player
-brew cask install nightowl
-brew cask install plug
-brew cask install postman
-brew cask install psequel
-brew cask install sequel-pro
-brew cask install smcfancontrol
-brew cask install soundnode
-brew cask install spectacle
-brew cask install sublime-text
-brew cask install transmission
-brew cask install transmit4
-brew cask install tunnelblick
-brew cask install visual-studio-code
-brew cask install vlc
-brew cask install whatsapp
+# Moved to Brewfile
 
 
 echo "Installing dev tools"
-brew install cmake git gpg gpg-agent goenv rbenv imagemagick memcached mongodb mysql node postgresql qt@5.5 redis rsync yarn bash-git-prompt bash-completion
+# Moved to Brewfile
 
 
 # Setup Go

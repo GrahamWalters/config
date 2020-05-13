@@ -84,11 +84,10 @@ mas "Xcode", id: 497799835
 
 
 
-# brew "mysql"
-# brew "postgresql"
-
 # brew "memcached"
 # brew "mongodb"
+# brew "mysql"
+# brew "postgresql"
 # brew "redis"
 
 # cask "arduino"
