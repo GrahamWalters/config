@@ -20,6 +20,10 @@ fi
 # goenv
 if which goenv > /dev/null; then eval "$(goenv init -)"; fi
 
+export GOPATH="$HOME/go"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
+
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
