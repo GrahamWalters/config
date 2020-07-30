@@ -6,14 +6,14 @@ alias ll="ls -al"
 brew_prefix=$(brew --prefix)
 
 # https://github.com/magicmonty/bash-git-prompt
-if [ -f "${brew_prefix}/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+if [ -s "${brew_prefix}/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   __GIT_PROMPT_DIR=${brew_prefix}/opt/bash-git-prompt/share
   source "${brew_prefix}/opt/bash-git-prompt/share/gitprompt.sh"
 fi
 
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion || {
   # if not found in /usr/local/etc, try the brew --prefix location
-  [ -f "${brew_prefix}/etc/bash_completion.d/git-completion.bash" ] && \
+  [ -s "${brew_prefix}/etc/bash_completion.d/git-completion.bash" ] && \
       . ${brew_prefix}/etc/bash_completion.d/git-completion.bash
 }
 
@@ -35,6 +35,12 @@ fi
 
 # misc
 export HISTTIMEFORMAT="%d/%m/%y %T "
+
+function enable_nvm {
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+}
 
 function messages {
   # Parameter is a iMessage account (email or phone number i.e. +33616.... )
