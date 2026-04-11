@@ -40,6 +40,7 @@ if ENV['USER'] == 'gw'
   cask "wireshark-app"
 elsif ENV['USER'] == 'gwalters'
   # cask "tableplus"
+  cask "lulu"
   cask "postman"
 end
 
