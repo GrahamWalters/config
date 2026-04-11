@@ -24,30 +24,39 @@ brew "sponge"
 brew "tree"
 brew "uv"
 
-# cask "dropbox"
-# cask "postman"
-# cask "tableplus"
-# cask "whatsapp" -- Replaced by iPhone mirroring.
+# Casks
+############################################################
 cask "brave-browser"
-cask "daisydisk"
 cask "docker-desktop"
 cask "github"
 cask "google-chrome"
 cask "visual-studio-code"
 cask "vlc"
-cask "wifiman"
-cask "wireshark-app"
 
-# mas "AdBlock", id: 1402042596
-# mas "Affinity Designer", id: 824171161
-# mas "Affinity Photo", id: 824183456
-# mas "Colors", id: 581915465
-# mas "Navicat for MySQL Lite", id: 412581753
-# mas "PiPifier", id: 1160374471
-# mas "Xcode", id: 497799835
-mas "Speedtest", id: 1153157709
-mas "Blackmagic Disk Speed Test", id: 425264550
+if ENV['USER'] == 'gw'
+  # cask "dropbox"
+  cask "daisydisk"
+  cask "wifiman"
+  cask "wireshark-app"
+elsif ENV['USER'] == 'gwalters'
+  # cask "tableplus"
+  cask "postman"
+end
 
+# Mac App Store
+############################################################
 
-# https://apps.apple.com/us/app/diskdedupe/id1457961323?mt=12
-# diskDedupe
+if ENV['USER'] == 'gw'
+  # mas "AdBlock", id: 1402042596
+  # mas "Affinity Designer", id: 824171161
+  # mas "Affinity Photo", id: 824183456
+  # mas "Colors", id: 581915465
+  # mas "Navicat for MySQL Lite", id: 412581753
+  # mas "PiPifier", id: 1160374471
+  # mas "Xcode", id: 497799835
+  mas "Speedtest", id: 1153157709
+  mas "Blackmagic Disk Speed Test", id: 425264550
+
+  # https://apps.apple.com/us/app/diskdedupe/id1457961323?mt=12
+  # diskDedupe
+end

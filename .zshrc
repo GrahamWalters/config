@@ -104,3 +104,8 @@ export HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK=1
 ## gpg-agent
 ####################################
 export GPG_TTY=$(tty)
+
+####################################
+## Environment-specific configuration
+####################################
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local

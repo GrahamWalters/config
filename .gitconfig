@@ -1,6 +1,5 @@
-[user]
-    name = Graham Walters
-    email = git@grahamwalters.me
+[include]
+	path = ~/.gitconfig.local
 
 [alias]
     co = checkout

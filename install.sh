@@ -12,6 +12,15 @@ rm ~/.gitignore_global || true && ln -s ~/dev/config/.gitignore_global ~/.gitign
 rm ~/.zshrc || true && ln -s ~/dev/config/.zshrc ~/.zshrc
 rm ~/.zprofile || true && ln -s ~/dev/config/.zprofile ~/.zprofile
 
+# Link environment-specific git config
+if [ "$USER" = "gw" ]; then
+  rm ~/.gitconfig.local || true && ln -s ~/dev/config/personal/.gitconfig.local ~/.gitconfig.local
+  rm ~/.zshrc.local || true && ln -s ~/dev/config/personal/.zshrc.local ~/.zshrc.local
+elif [ "$USER" = "gwalters" ]; then
+  rm ~/.gitconfig.local || true && ln -s ~/dev/config/work/.gitconfig.local ~/.gitconfig.local
+  rm ~/.zshrc.local || true && ln -s ~/dev/config/work/.zshrc.local ~/.zshrc.local
+fi
+
 source ~/.zshrc
 
 # Install brew packages

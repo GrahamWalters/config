@@ -1,0 +1,6 @@
+[user]
+	name = Graham Walters
+	email = git@grahamwalters.me
+    signingKey = 3567A579257544EB
+[commit]
+    gpgSign = true
