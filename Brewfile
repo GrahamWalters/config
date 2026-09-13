@@ -30,6 +30,7 @@ cask "brave-browser"
 cask "docker-desktop"
 cask "github"
 cask "google-chrome"
+cask "rectangle"
 cask "visual-studio-code"
 cask "vlc"
 
@@ -38,6 +39,7 @@ if ENV['USER'] == 'gw'
   cask "daisydisk"
   cask "wifiman"
   cask "wireshark-app"
+  cask "darrylmorley/whatcable/whatcable"
 elsif ENV['USER'] == 'gwalters'
   # cask "tableplus"
   cask "lulu"
@@ -55,9 +57,10 @@ if ENV['USER'] == 'gw'
   # mas "Navicat for MySQL Lite", id: 412581753
   # mas "PiPifier", id: 1160374471
   # mas "Xcode", id: 497799835
-  mas "Speedtest", id: 1153157709
-  mas "Blackmagic Disk Speed Test", id: 425264550
-
   # https://apps.apple.com/us/app/diskdedupe/id1457961323?mt=12
   # diskDedupe
+
+  mas "Blackmagic Disk Speed Test", id: 425264550
+  mas "Speedtest", id: 1153157709
+  mas "WireGuard", id: 1451685025
 end
