@@ -2,7 +2,6 @@
 # brew "cmake"
 # brew "coreutils"
 # brew "jdupes"
-# brew "ffmpeg"
 # brew "gnupg"
 # brew "htop"
 # brew "parallel"
@@ -23,6 +22,12 @@ brew "rsync"
 brew "sponge"
 brew "tree"
 brew "uv"
+if ENV['USER'] == 'gw'
+  brew "apfel"
+  brew "ffmpeg"
+  brew "age"
+  brew "sops"
+end
 
 # Casks
 ############################################################
